@@ -1,5 +1,5 @@
 import React from 'react';
-import Escena from "./components/escena/Escena.js";
+import Escena from "./components/escena/escena/Escena.js";
 import story from "./data/story.js";
 import "./styles/App.css";
 
