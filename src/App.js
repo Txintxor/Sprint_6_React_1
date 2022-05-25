@@ -1,7 +1,7 @@
 import React from 'react';
 import Escena from "./components/escena/Escena.js";
-import story from "./components/escena/data/story.js";
-import "./App.css";
+import story from "./data/story.js";
+import "./styles/App.css";
 
 
 function App() {
