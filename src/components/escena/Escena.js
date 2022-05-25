@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import story from "../../data/story.js";
-import {Story, Button} from "./EscenaStyled.js"
-
-
+import { Story, Button } from "./EscenaStyled.js";
 
 const Escena = () => {
   const [index, setIndex] = useState(0);
@@ -17,7 +15,7 @@ const Escena = () => {
           : (item.style.backgroundColor = "#ffd60a");
       }
       setIndex(index + 1);
-    }    
+    }
   };
 
   const prior = () => {
@@ -30,7 +28,7 @@ const Escena = () => {
           : (item.style.backgroundColor = "#ffd60a");
       }
       setIndex(index - 1);
-    }    
+    }
   };
 
   return (
@@ -38,19 +36,20 @@ const Escena = () => {
       <Button onClick={prior}>Anterior</Button>
       <Button onClick={next}>Següent</Button>
       <div id="storyContainer">
-        {story.map((elem, index) => (
-          index === 0 ? <Story key={index} id={index} 
-          style={{background : "#FC6722"}}>
-          {elem}
-       </Story>
-          :<Story key={index} id={index}>
-             {elem}
-          </Story>
-        ))}
+        {story.map((elem, index) =>
+          index === 0 ? (
+            <Story key={index} id={index} style={{ background: "#FC6722" }}>
+              {elem}
+            </Story>
+          ) : (
+            <Story key={index} id={index}>
+              {elem}
+            </Story>
+          )
+        )}
       </div>
     </div>
   );
 };
-
 
 export default Escena;
