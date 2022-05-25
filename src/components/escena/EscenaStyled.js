@@ -12,7 +12,7 @@ const Story = styled.p`
 `;
 
 const Button = styled.button`
-  width: 45%;
+  
   border-radius: 8px;
   margin: 2rem 1.5rem;
   padding: 0.5rem;
