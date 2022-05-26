@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="App">
       {main && <Elem/>}
-      <header className="App-header">
+      <header className="App-header" style={{backgroundImage : `url(img/1.jpg)`}}>
         <div id="buttonContainer">
           <Button onClick={prior}>Anterior</Button>
           <Button onClick={next}>Següent</Button>
