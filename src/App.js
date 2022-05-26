@@ -7,6 +7,7 @@ import "./styles/App.css";
 function App() {
   const [index, setIndex] = useState(0);
 
+  // PANTALLA DE PRESENTACION
   const Elem = () => {
     return (
       <Intro>
@@ -17,13 +18,15 @@ function App() {
   };
   const [main, setMain] = useState(true);
 
+  // FUNCION QUE ELIMINA LA PANTALLA DE PRESENTACIÓN
   const dismiss = () => {
     setMain(false);
   };
 
-
+//AQUÍ GUARDO EL ELEMENTO QUE SERVIRÁ DE BACKGROUND
   const back = document.querySelector('.App-header');
-  
+
+  //FUNCION QUE LLAMA EL BOTON ANTERIOR PARA PASAR AL SIGUIENTE NIVEL DE LA HISTORIA
   const next = () => {
     const target = document.getElementById("storyContainer");
     
@@ -39,6 +42,7 @@ function App() {
     }
   };
 
+  //FUNCION QUE LLAMA EL BOTON SEGÜENT PARA BAJAR AL NIVEL ANTERIOR DE LA HISTORIA
   const prior = () => {
     if (index > 0) {
       
