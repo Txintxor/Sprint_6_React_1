@@ -12,7 +12,6 @@ const Story = styled.p`
 `;
 
 const Button = styled.button`
-  
   border-radius: 8px;
   margin: 2rem 1.5rem;
   padding: 0.5rem;
@@ -20,4 +19,11 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export {Story, Button};
+const Intro = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c34;`
+export {Story, Button, Intro};

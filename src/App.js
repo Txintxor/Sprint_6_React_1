@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Escena from "./components/escena/Escena.js";
 import story from "./data/story.js";
-import { Button, Story } from "./components/escena/EscenaStyled.js";
+import { Button, Story, Intro } from "./components/escena/EscenaStyled.js";
 import "./styles/App.css";
 
 function App() {
@@ -9,10 +9,10 @@ function App() {
 
   const Elem = () => {
     return (
-      <div>
+      <Intro>
         <Story>Helloooo</Story>
         <Button onClick={dismiss}>Welcome</Button>
-      </div>
+      </Intro>
     );
   };
   const [main, setMain] = useState(true);
