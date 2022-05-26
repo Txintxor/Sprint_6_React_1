@@ -26,7 +26,7 @@ function App() {
 //AQUÍ GUARDO EL ELEMENTO QUE SERVIRÁ DE BACKGROUND
   const back = document.querySelector('.App-header');
 
-  //FUNCION QUE LLAMA EL BOTON ANTERIOR PARA PASAR AL SIGUIENTE NIVEL DE LA HISTORIA
+  //FUNCION QUE LLAMA EL BOTON SEGÜENT PARA PASAR AL SIGUIENTE NIVEL DE LA HISTORIA
   const next = () => {
     const target = document.getElementById("storyContainer");
     
@@ -42,7 +42,7 @@ function App() {
     }
   };
 
-  //FUNCION QUE LLAMA EL BOTON SEGÜENT PARA BAJAR AL NIVEL ANTERIOR DE LA HISTORIA
+  //FUNCION QUE LLAMA EL BOTON ANTERIOR PARA BAJAR AL NIVEL ANTERIOR DE LA HISTORIA
   const prior = () => {
     if (index > 0) {
       
