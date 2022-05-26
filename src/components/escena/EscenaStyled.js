@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const Story = styled.p`
+
   font-size: 1.25rem;
   color: #001d3d;
   background-color: #ffd60a;
@@ -25,5 +26,9 @@ const Intro = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #282c34;`
+  background-color: #282c34;
+  z-index: 2`;
+
+
+
 export {Story, Button, Intro};

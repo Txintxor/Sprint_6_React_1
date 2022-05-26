@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Escena from "./components/escena/Escena.js";
+import {Escena} from "./components/escena/Escena.js";
 import story from "./data/story.js";
-import { Button, Story, Intro } from "./components/escena/EscenaStyled.js";
+import { Button, Story, Intro} from "./components/escena/EscenaStyled.js";
 import "./styles/App.css";
 
 function App() {
@@ -21,15 +21,19 @@ function App() {
     setMain(false);
   };
 
+
+  const back = document.querySelector('.App-header');
+  
   const next = () => {
     const target = document.getElementById("storyContainer");
+    
     let children = target.children;
     children = [...children];
     if (index < children.length - 1) {
-      children.map((element, i) =>
-        i === index + 1
-          ? (element.style.backgroundColor = "#FC6722")
-          : (element.style.backgroundColor = "#ffd60a")
+      children.map((element, i) =>        
+      i === index + 1             
+          ? (element.style.backgroundColor = "#FC6722") && (back.style.backgroundImage = `url(img/${i+1}.jpg)`)
+          : (element.style.backgroundColor = "#ffd60a") 
       );
       setIndex(index + 1);
     }
@@ -37,12 +41,13 @@ function App() {
 
   const prior = () => {
     if (index > 0) {
+      
       const target = document.getElementById("storyContainer");
       let children = target.children;
       children = [...children];
       children.map((e, i) =>
         i === index - 1
-          ? (e.style.backgroundColor = "#FC6722")
+          ? (e.style.backgroundColor = "#FC6722") && (back.style.backgroundImage = `url(img/${index}.jpg)`)
           : (e.style.backgroundColor = "#ffd60a")
       );
       setIndex(index - 1);
@@ -62,11 +67,11 @@ function App() {
             index === 0 ? (
               <Escena
                 key={index}
-                element={ele}
+                element={ele.txt}
                 style={{ backgroundColor: "#FC6722" }}
               />
             ) : (
-              <Escena key={index} element={ele} />
+              <Escena key={index} element={ele.txt} />
             )
           )}
         </div>
